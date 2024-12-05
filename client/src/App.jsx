@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/users");
+        const response = await axios.get("http://18.209.85.44:3000/users");
         setUsers(response.data);
       } catch (error) {
         console.error("Erro ao buscar usuários:", error);
@@ -30,7 +30,7 @@ function App() {
     if (!username.trim() || !fullName.trim()) return;
 
     try {
-      const response = await axios.post("http://localhost:3000/users", {
+      const response = await axios.post("http://18.209.85.44:3000/users", {
         username,
         full_name: fullName,
       });
@@ -45,7 +45,7 @@ function App() {
   // Função para deletar um usuário
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/users/${id}`);
+      await axios.delete(`http://18.209.85.44:3000/users/${id}`);
       setUsers(users.filter((user) => user.id !== id));
     } catch (error) {
       console.error("Erro ao deletar usuário:", error);
