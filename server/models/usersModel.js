@@ -15,7 +15,7 @@ class usersModel {
 
   async createUser(newUser) {
     try {
-      const sql = `INSERT INTO users (username, full_name)
+      const sql = `INSERT INTO USERS (username, full_name)
         VALUES (?, ?); 
       `;
 
@@ -33,13 +33,13 @@ class usersModel {
 
 
   readUser() {
-    const sql = "SELECT * FROM users";
+    const sql = "SELECT * FROM USERS";
 
     return this.executeQuery(sql);
   }
 
   deleteUser(id) {
-    const sql = `DELETE FROM users WHERE id = ? ;`;
+    const sql = `DELETE FROM USERS WHERE id = ? ;`;
 
     return this.executeQuery(sql, id);
   }

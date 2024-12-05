@@ -21,7 +21,7 @@ connection.connect((error) => {
 
   usersTable.init(connection);
 
-  app.listen(port, '0.0.0.0', (error) => {
+  app.listen(3000, '0.0.0.0', (error) => {
     if (error) {
       console.log("Error", error);
       return;
