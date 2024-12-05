@@ -31,7 +31,6 @@ class usersModel {
     }
   }
 
-
   readUser() {
     const sql = "SELECT * FROM USERS";
 
