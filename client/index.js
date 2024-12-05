@@ -3,7 +3,7 @@ const axios = require("axios"); // Para fazer requisições HTTP
 const app = express();
 
 const PORT = 3000;
-const BACKEND_URL = "http://18.209.85.44:3000/users"; // URL do seu backend
+const BACKEND_URL = "http://18.209.85.44:3001/users"; // URL do seu backend
 
 app.get("/", async (req, res) => {
   try {

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 3001;
 const cors = require("cors");
 const connection = require("./infra/connection");
 const usersTable = require("./infra/usersTable");
@@ -21,7 +21,7 @@ connection.connect((error) => {
 
   usersTable.init(connection);
 
-  app.listen(3000, '0.0.0.0', (error) => {
+  app.listen(3001, '0.0.0.0', (error) => {
     if (error) {
       console.log("Error", error);
       return;
